@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMICalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="istockphoto-859587780-612x612" translatesAutoresizingMaskIntoConstraints="NO" id="HCT-CE-J7T">
+                                <rect key="frame" x="0.0" y="44" width="414" height="428"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight in Kgs" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="imG-kB-HoO">
+                                <rect key="frame" x="58" y="425" width="298" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height in cm" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KIN-6Z-VUG">
+                                <rect key="frame" x="58" y="489" width="298" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvy-BT-YQh">
+                                <rect key="frame" x="115" y="586" width="190" height="50"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="CALCULATE">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="igT-NJ-s6Q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mH7-fc-XzB">
+                                <rect key="frame" x="20" y="681" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI RESULTS:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDG-wG-10J">
+                                <rect key="frame" x="20" y="754" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YDG-wG-10J" firstAttribute="top" secondItem="mH7-fc-XzB" secondAttribute="bottom" constant="37" id="6Jc-GW-hMK"/>
+                            <constraint firstItem="Bvy-BT-YQh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="6iu-Aa-ayC"/>
+                            <constraint firstItem="imG-kB-HoO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7ek-tV-Dsx"/>
+                            <constraint firstItem="HCT-CE-J7T" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8v9-uO-OFe"/>
+                            <constraint firstItem="mH7-fc-XzB" firstAttribute="leading" secondItem="YDG-wG-10J" secondAttribute="leading" id="8y5-jp-imd"/>
+                            <constraint firstItem="imG-kB-HoO" firstAttribute="trailing" secondItem="KIN-6Z-VUG" secondAttribute="trailing" id="BYx-me-dow"/>
+                            <constraint firstItem="HCT-CE-J7T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G7Z-SO-oR4"/>
+                            <constraint firstItem="mH7-fc-XzB" firstAttribute="trailing" secondItem="YDG-wG-10J" secondAttribute="trailing" id="I5j-gP-bmq"/>
+                            <constraint firstItem="imG-kB-HoO" firstAttribute="centerX" secondItem="HCT-CE-J7T" secondAttribute="centerX" id="Ko5-kM-oTD"/>
+                            <constraint firstItem="imG-kB-HoO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="Msb-sl-zuU"/>
+                            <constraint firstItem="mH7-fc-XzB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RX1-cS-AEP"/>
+                            <constraint firstItem="Bvy-BT-YQh" firstAttribute="top" secondItem="KIN-6Z-VUG" secondAttribute="bottom" constant="51" id="f68-a4-bOn"/>
+                            <constraint firstItem="KIN-6Z-VUG" firstAttribute="centerX" secondItem="mH7-fc-XzB" secondAttribute="centerX" id="fJZ-tf-KbN"/>
+                            <constraint firstItem="mH7-fc-XzB" firstAttribute="top" secondItem="Bvy-BT-YQh" secondAttribute="bottom" constant="45" id="kh6-gW-S1j"/>
+                            <constraint firstItem="HCT-CE-J7T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="scY-17-Clh"/>
+                            <constraint firstItem="KIN-6Z-VUG" firstAttribute="top" secondItem="HCT-CE-J7T" secondAttribute="bottom" constant="17" id="sxq-Mo-aBy"/>
+                            <constraint firstItem="imG-kB-HoO" firstAttribute="leading" secondItem="KIN-6Z-VUG" secondAttribute="leading" id="z2J-LJ-veA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bmiLabel" destination="mH7-fc-XzB" id="vrL-yu-HKZ"/>
+                        <outlet property="bmiResultLabel" destination="YDG-wG-10J" id="rv6-ja-EBW"/>
+                        <outlet property="heightTextField" destination="KIN-6Z-VUG" id="5vS-aL-f0U"/>
+                        <outlet property="weightTextField" destination="imG-kB-HoO" id="UtX-K2-PcT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="53.571428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="istockphoto-859587780-612x612" width="612" height="428"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
