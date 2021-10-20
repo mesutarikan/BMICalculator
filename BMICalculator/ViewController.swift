@@ -18,6 +18,10 @@ class ViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    func labelChangeFunc(changeTextLabel : String,changeColor : UIColor){
+        bmiResultLabel.text = changeTextLabel
+        bmiResultLabel.textColor = changeColor
+    }
 
     @IBAction func clickedButton(_ sender: Any) {
         if let height = Float (heightTextField.text!){
@@ -28,39 +32,33 @@ class ViewController: UIViewController {
                 
                 // bmi check
                 if bmi < 18.5 && bmi >= 0 {
-                    bmiResultLabel.text = "UNDERWEIGHT"
-                    bmiResultLabel.textColor = UIColor.blue
-                   
+                    labelChangeFunc(changeTextLabel: "UNDERWEIGHT", changeColor: UIColor.blue)
                 }
-                else if bmi < 25 && bmi >= 18.5 {
-                    bmiResultLabel.text = "NORMAL"
-                    bmiResultLabel.textColor = UIColor.green
-                 
-                }
-                else if bmi < 30 && bmi >= 25 {
-                    bmiResultLabel.text = "OVERWEIGHT"
-                    bmiResultLabel.textColor = UIColor.yellow
-                    
-                }
-                else if bmi < 35 && bmi >= 30 {
-                    bmiResultLabel.text = "OBESE"
-                    bmiResultLabel.textColor = UIColor.orange
-                    
-                }
-                else {
-                    bmiResultLabel.text = "EXTREMLY OBESE"
-                    bmiResultLabel.textColor = UIColor.red
-                   
-                }
-            }
-            else {
-                bmiResultLabel.text = "Wrong weight value."
                 
+                else if bmi < 25 && bmi >= 18.5 {
+                    labelChangeFunc(changeTextLabel: "NORMAL", changeColor: UIColor.green)
+                 }
+                
+                else if bmi < 30 && bmi >= 25 {
+                    labelChangeFunc(changeTextLabel: "OVERWEIGHT", changeColor: UIColor.yellow)
+                }
+                
+                else if bmi < 35 && bmi >= 30 {
+                    labelChangeFunc(changeTextLabel: "OBESE", changeColor: UIColor.orange)
+                }
+                
+                else {
+                    labelChangeFunc(changeTextLabel: "EXTREMLY OBESE", changeColor: UIColor.red)
+                     }
             }
-    }
+            
+            else {
+                labelChangeFunc(changeTextLabel: "Wrong weight value.", changeColor: UIColor.red)
+               }
+        }
+        
         else{
-            bmiResultLabel.text = "Wrong height value."
-           
+            labelChangeFunc(changeTextLabel: "Wrong height value.", changeColor: UIColor.red)
         }
     }
     
